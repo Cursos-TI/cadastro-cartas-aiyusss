@@ -102,20 +102,22 @@ int main(){
     float super_poder1 = (float)populacao1 + area1 + pib1 + pontosturisticos1 + pib_per_capita1 + (1.0f / densidade1);
     float super_poder2 = (float)populacao2 + area2 + pib2 + pontosturisticos2 + pib_per_capita2 + (1.0f / densidade2);
 
-    //exibição do super poder
+      //exibição do super poder
 
     printf("Super poder: %.2f\n", super_poder1);
     printf("Super poder: %.2f\n", super_poder2);
 
     printf("\nComparacao de Cartas:\n");
-    printf("Populacao: Carta 1 venceu (%d)\n", populacao1 > populacao2);
-    printf("Area: Carta 1 venceu (%d)\n", area1 > area2);
-    printf("PIB: Carta 1 venceu (%d)\n", pib1 > pib2);
-    printf("Pontos Turisticos: Carta 1 venceu (%d)\n", pontosturisticos1 > pontosturisticos2);
-    printf("Densidade Populacional: Carta 1 venceu (%d)\n", densidade1 < densidade2);
-    printf("PIB per Capita: Carta 1 venceu (%d)\n", pib_per_capita1 > pib_per_capita2);
-    printf("Super Poder: Carta 1 venceu (%d)\n", super_poder1 > super_poder2);
-
+    if(populacao1 > populacao2){
+        printf("Populacao: Carta 1 venceu\n");
+    }else if(populacao1 < populacao2){
+        printf("Populacao: Carta 2 venceu\n");
+    }else{
+        printf("Populacao: Empate\n");
+    }
+   
     return 0;
 }
+
+
 
